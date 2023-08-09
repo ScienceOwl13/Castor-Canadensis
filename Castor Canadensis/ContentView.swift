@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct JokeView: View {
+struct ContentView: View {
     @State private var jokeString = "No Joke Available"
     @State private var fetching = false
     @AppStorage("joketype") var jokeType: JokeType = .dadjoke
@@ -17,7 +17,7 @@ struct JokeView: View {
             Spacer()
             
             Button("Hello") {
-                runPythonScript()
+                print("Hello World")
             }
             
             
@@ -29,7 +29,7 @@ struct JokeView: View {
     func runPythonScript() {
         let task = Process()
         task.executableURL = URL(fileURLWithPath: "/usr/bin/python3") // Path to Python executable
-        task.arguments = ["/Users/connor/Misc./Coding/Python/toggleBrowser/main.py"] // Replace with your script's path
+        task.arguments = ["/Users/connor/Misc./Coding/Swift/Castor Canadensis/Castor Canadensis/main.py"] // Replace with your script's path
         
         let pipe = Pipe()
         task.standardOutput = pipe
@@ -46,9 +46,9 @@ struct JokeView: View {
     }
 }
 
-struct JokeView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        JokeView()
+        ContentView()
             .frame(width: 225, height: 225)
     }
 }

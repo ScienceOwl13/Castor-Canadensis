@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B37F5FD02A7B34B2009D831E /* Castor_CanadensisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F5FCF2A7B34B2009D831E /* Castor_CanadensisApp.swift */; };
-		B37F5FD22A7B34B2009D831E /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F5FD12A7B34B2009D831E /* JokeView.swift */; };
+		B37F5FD22A7B34B2009D831E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F5FD12A7B34B2009D831E /* ContentView.swift */; };
 		B37F5FD42A7B34B3009D831E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B37F5FD32A7B34B3009D831E /* Assets.xcassets */; };
 		B37F5FD72A7B34B3009D831E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B37F5FD62A7B34B3009D831E /* Preview Assets.xcassets */; };
 		B37F5FDF2A7B3505009D831E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F5FDE2A7B3505009D831E /* APIService.swift */; };
@@ -16,12 +16,13 @@
 		B37F5FE32A7B3601009D831E /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37F5FE22A7B3601009D831E /* Joke.swift */; };
 		B3A2CFD52A7C054E00357C94 /* ApplicationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A2CFD42A7C054E00357C94 /* ApplicationMenu.swift */; };
 		B3A2CFD72A7C1F2300357C94 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B3A2CFD62A7C1F2300357C94 /* Credits.rtf */; };
+		B3ECA84E2A7DD13E00BF2672 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = B3ECA84D2A7DD13E00BF2672 /* main.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B37F5FCC2A7B34B2009D831E /* Castor Canadensis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Castor Canadensis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37F5FCF2A7B34B2009D831E /* Castor_CanadensisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Castor_CanadensisApp.swift; sourceTree = "<group>"; };
-		B37F5FD12A7B34B2009D831E /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
+		B37F5FD12A7B34B2009D831E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B37F5FD32A7B34B3009D831E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B37F5FD62A7B34B3009D831E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B37F5FD82A7B34B3009D831E /* Castor_Canadensis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Castor_Canadensis.entitlements; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		B37F5FE22A7B3601009D831E /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		B3A2CFD42A7C054E00357C94 /* ApplicationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMenu.swift; sourceTree = "<group>"; };
 		B3A2CFD62A7C1F2300357C94 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		B3ECA84D2A7DD13E00BF2672 /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				B37F5FCF2A7B34B2009D831E /* Castor_CanadensisApp.swift */,
-				B37F5FD12A7B34B2009D831E /* JokeView.swift */,
+				B37F5FD12A7B34B2009D831E /* ContentView.swift */,
 				B3A2CFD42A7C054E00357C94 /* ApplicationMenu.swift */,
 				B3A2CFD62A7C1F2300357C94 /* Credits.rtf */,
 				B37F5FE02A7B353A009D831E /* JokeType.swift */,
@@ -71,6 +73,7 @@
 				B37F5FDE2A7B3505009D831E /* APIService.swift */,
 				B37F5FD32A7B34B3009D831E /* Assets.xcassets */,
 				B37F5FD82A7B34B3009D831E /* Castor_Canadensis.entitlements */,
+				B3ECA84D2A7DD13E00BF2672 /* main.py */,
 				B37F5FD52A7B34B3009D831E /* Preview Content */,
 			);
 			path = "Castor Canadensis";
@@ -145,6 +148,7 @@
 				B37F5FD72A7B34B3009D831E /* Preview Assets.xcassets in Resources */,
 				B3A2CFD72A7C1F2300357C94 /* Credits.rtf in Resources */,
 				B37F5FD42A7B34B3009D831E /* Assets.xcassets in Resources */,
+				B3ECA84E2A7DD13E00BF2672 /* main.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +162,7 @@
 				B37F5FE12A7B353A009D831E /* JokeType.swift in Sources */,
 				B3A2CFD52A7C054E00357C94 /* ApplicationMenu.swift in Sources */,
 				B37F5FE32A7B3601009D831E /* Joke.swift in Sources */,
-				B37F5FD22A7B34B2009D831E /* JokeView.swift in Sources */,
+				B37F5FD22A7B34B2009D831E /* ContentView.swift in Sources */,
 				B37F5FDF2A7B3505009D831E /* APIService.swift in Sources */,
 				B37F5FD02A7B34B2009D831E /* Castor_CanadensisApp.swift in Sources */,
 			);
