@@ -10,24 +10,26 @@ import SwiftUI
 
 class ApplicationMenu: NSObject {
     
-    @AppStorage("defaultBrowser") var defaultBrowser: String = "Safari"
+	@AppStorage("defaultBrowser") var defaultBrowser: String = "Safari"
 
     lazy var showDefaultBrowser : NSMenuItem = {
         return NSMenuItem(title: "Default Browser: \(defaultBrowser)", action: nil, keyEquivalent: "")
     }()
-    
-    
-    
+
+
     let menu = NSMenu()
     
     func createMenu() -> NSMenu {
                 
+		// ContentView() in the menu bar
+		/*
         let topView = NSHostingController(rootView: ContentView())
         topView.view.frame.size = CGSize(width: 225, height: 225)
-        
+
         let customMenuItem = NSMenuItem()
         customMenuItem.view = topView.view
         menu.addItem(customMenuItem)
+		 */
         
         // About
         let aboutMenuItem = NSMenuItem(title: "About",
@@ -54,25 +56,34 @@ class ApplicationMenu: NSObject {
                                              action: #selector(deskLampOn),
                                              keyEquivalent: "o")
         deskLampOffMenuItem.target = self
-        deskLampOffMenuItem.representedObject = "shortcuts://run-shortcut?name=DL%20Off&input=clipboard"
+        deskLampOffMenuItem.representedObject = "shortcuts://run-shortcut?name=DL%20Off&input="
         
         // Toggle default browser
-        let toggleDefaultBrowser = NSMenuItem(title: "Toggle Default Browser",
+        let toggleDefaultBrowserItem = NSMenuItem(title: "Toggle Default Browser",
                                               action: #selector(runPythonScript),
                                               keyEquivalent: "")
-        toggleDefaultBrowser.target = self
+        toggleDefaultBrowserItem.target = self
+		
+		// Clear Downloads
+		
+		let clearDownloadsItem = NSMenuItem(title: "Clear Downloads",
+											action: #selector(clearDownloads),
+											keyEquivalent: "c")
+		clearDownloadsItem.target = self
+		clearDownloadsItem.representedObject = "shortcuts://run-shortcut?name=Clear%20Downloads&input="
         
         
         
         /* CREATE THE VIEW */
         
-        menu.addItem(toggleDefaultBrowser)
+        menu.addItem(toggleDefaultBrowserItem)
         menu.addItem(showDefaultBrowser)
         
         menu.addItem(NSMenuItem.separator())
         
         menu.addItem(deskLampOnMenuItem)
         menu.addItem(deskLampOffMenuItem)
+		menu.addItem(clearDownloadsItem)
         
         menu.addItem(NSMenuItem.separator())
         
@@ -85,8 +96,17 @@ class ApplicationMenu: NSObject {
     
     //About Menu
     @objc func about(sender: NSMenuItem) {
-        NSApp.orderFrontStandardAboutPanel()
+		NSApp.orderFrontStandardAboutPanel()
     }
+	
+	// Clear Downloads
+	@objc func clearDownloads(sender: NSMenuItem) {
+		let link = sender.representedObject as! String
+		guard let url = URL(string: link) else { return }
+		NSWorkspace.shared.open(url)
+	}
+	
+	
     // Desk Lamp Control
     // On
     @objc func deskLampOn(sender: NSMenuItem) {
@@ -117,11 +137,11 @@ class ApplicationMenu: NSObject {
 
         if defaultBrowser == "Safari" {
             defaultBrowser = "Firefox"
-            showDefaultBrowser.title = "Default Browser: Firefox"
+            showDefaultBrowser.title = "Default Browser: \(defaultBrowser)"
             print(defaultBrowser)
         } else if defaultBrowser == "Firefox" {
             defaultBrowser = "Safari"
-            showDefaultBrowser.title = "Default Browser: Safari"
+            showDefaultBrowser.title = "Default Browser: \(defaultBrowser)"
 
             print(defaultBrowser)
         }

@@ -8,19 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var jokeString = "No Joke Available"
-    @State private var fetching = false
-    @AppStorage("joketype") var jokeType: JokeType = .dadjoke
     
     var body: some View {
         VStack(alignment: .center) {
             Spacer()
-            
+
             Button("Hello") {
-                print("Hello World")
+                print()
             }
-            
-            
+
+
                 Spacer()
         }
         .padding()
