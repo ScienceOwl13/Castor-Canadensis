@@ -17,6 +17,9 @@ Created to simplyfy my Menu Bar, along with being the first real project that I'
 
 **Quit**: Stops the application from runnign.
 
+## The Name
+*Castor Canadensis* is the scientific name for the North American Beaver, Canada's national animal. The scientific name comes from "Castor", the latin word for beaver, and "Canadensis" comes from the Latinized version of Canada.
+
 ## Resources Used:
 ### Videos:
 
