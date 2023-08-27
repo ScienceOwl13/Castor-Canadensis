@@ -70,7 +70,7 @@ class ApplicationMenu: NSObject {
 											action: #selector(clearDownloads),
 											keyEquivalent: "c")
 		clearDownloadsItem.target = self
-		clearDownloadsItem.representedObject = "shortcuts://run-shortcut?name=Clear%20Downloads&input="
+		clearDownloadsItem.representedObject = "shortcuts://run-shortcut?name=Clear%20Downloads%1C&input="
         
         
         
